@@ -806,17 +806,29 @@ ext | String | 파일 확장자로 다음 중 하나를 설정할 수 있습니�
 
 #### orientation `Array` `[1, 0, 0]`
 Sets the direction the audio source is pointing in the 3D cartesian coordinate space. Depending on how directional the sound is, based on the `cone` attributes, a sound pointing away from the listener can be quiet or silent.
+
 #### stereo `Number` `null`
+
 Sets the stereo panning value of the audio source for this sound or group. This makes it easy to setup left/right panning with a value of `-1.0` being far left and a value of `1.0` being far right.
+
 #### pos `Array` `null`
+
 Sets the 3D spatial position of the audio source for this sound or group relative to the global listener.
+
 #### pannerAttr `Object`
+
 Sets the panner node's attributes for a sound or group of sounds. See the `pannerAttr` method for all available options.
+
 #### onstereo `Function`
+
 Fires when the current sound has the stereo panning changed. The first parameter is the ID of the sound.
+
 #### onpos `Function`
+
 Fires when the current sound has the listener position changed. The first parameter is the ID of the sound.
+
 #### onorientation `Function`
+
 Fires when the current sound has the direction of the listener changed. The first parameter is the ID of the sound.
 
 <br>
@@ -824,26 +836,34 @@ Fires when the current sound has the direction of the listener changed. The firs
 ### 플러그인 메서드
 
 #### stereo(pan, [id])
+
 Get/set the stereo panning of the audio source for this sound or all in the group.
+
 * **pan**: `Number` A value of `-1.0` is all the way left and `1.0` is all the way right.
 * **id**: `Number` `optional` The sound ID. If none is passed, all in group will be updated.
 
 #### pos(x, y, z, [id])
+
 Get/set the 3D spatial position of the audio source for this sound or group relative to the global listener.
+
 * **x**: `Number` The x-position of the audio source.
 * **y**: `Number` The y-position of the audio source.
 * **z**: `Number` The z-position of the audio source.
 * **id**: `Number` `optional` The sound ID. If none is passed, all in group will be updated.
 
 #### orientation(x, y, z, [id])
-Get/set the direction the audio source is pointing in the 3D cartesian coordinate space. Depending on how directional the sound is, based on the `cone` attributes, a sound pointing away from the listener can be quiet or silent.
+
+Get/set the direction the audio source is pointing in the 3D cartesian coordinate space. Depending on how directional the sound is, based on the 
+`cone` attributes, a sound pointing away from the listener can be quiet or silent.
 * **x**: `Number` The x-orientation of the source.
 * **y**: `Number` The y-orientation of the source.
 * **z**: `Number` The z-orientation of the source.
 * **id**: `Number` `optional` The sound ID. If none is passed, all in group will be updated.
 
 #### pannerAttr(o, [id])
+
 Get/set the panner node's attributes for a sound or group of sounds.
+
 * **o**: `Object` All values to update.
   * **coneInnerAngle** `360` A parameter for directional audio sources, this is an angle, in degrees, inside of which there will be no volume reduction.
   * **coneOuterAngle** `360` A parameter for directional audio sources, this is an angle, in degrees, outside of which the volume will be reduced to a constant value of `coneOuterGain`.
@@ -859,17 +879,23 @@ Get/set the panner node's attributes for a sound or group of sounds.
 ### 플러그인 글로벌 메서드
 
 #### stereo(pan)
+
 Helper method to update the stereo panning position of all current `Howls`. Future `Howls` will not use this value unless explicitly set.
+
 * **pan**: `Number` A value of -1.0 is all the way left and 1.0 is all the way right.
 
 #### pos(x, y, z)
+
 Get/set the position of the listener in 3D cartesian space. Sounds using 3D position will be relative to the listener's position.
+
 * **x**: `Number` The x-position of the listener.
 * **y**: `Number` The y-position of the listener.
 * **z**: `Number` The z-position of the listener.
 
 #### orientation(x, y, z, xUp, yUp, zUp)
+
 Get/set the direction the listener is pointing in the 3D cartesian space. A front and up vector must be provided. The front is the direction the face of the listener is pointing, and up is the direction the top of the listener is pointing. Thus, these values are expected to be at right angles from each other.
+
 * **x**: `Number` The x-orientation of listener.
 * **y**: `Number` The y-orientation of listener.
 * **z**: `Number` The z-orientation of listener.

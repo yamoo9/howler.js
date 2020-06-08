@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ko-KR">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>howler.js - 모던 웹 JavaScript 오디오 라이브러리</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@GoldFireStudios" />
+    <meta name="twitter:title" content="howler.js - 모던 웹 JavaScript 오디오 라이브러리" />
+    <meta name="twitter:description" content="howler.js 라이브러리는 모든 플랫폼에서 쉽고, 안정적인 JavaScript 오디오 작업을 가능하게 합니다." />
+    <meta name="twitter:image" content="https://howlerjs.com/assets/images/twittercard.png" />
+    <meta name="twitter:creator" content="@GoldFireStudios" />
+    <meta property="og:url" content="https://howlerjs.com" />
+    <meta property="og:title" content="howler.js - 모던 웹 JavaScript 오디오 라이브러리" />
+    <meta property="og:description" content="howler.js 라이브러리는 모든 플랫폼에서 쉽고, 안정적인 JavaScript 오디오 작업을 가능하게 합니다." />
+    <meta property="og:image" content="https://howlerjs.com/assets/images/twittercard.png" />
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet" />
+    <link href="assets/js/main_v=6.js" rel="preload" as="script" />
+    <link href="assets/howler.js/dist/howler.min.js" rel="preload" as="script" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" crossorigin />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link href="https://api.github.com" rel="preconnect" crossorigin />
+    <link href="showcase/index.html" rel="prerender" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    <link rel="stylesheet" href="assets/css/styles_v=2.css" />
+    <style>
+      html,
+      body {
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+        margin: 0;
+      }
+
+      h2 {
+        font-weight: normal;
+      }
+
+      p {
+        margin: 0;
+        line-height: 1.5;
+        font-weight: 400;
+      }
+    </style>
+    <script>
+      // 앞으로 / 뒤로 탐색 버튼 사용 시, Safari 브라우저에서 스크롤 버그를 해결하기 위해 해킹합니다.
+      window.onpageshow = function (event) {
+        if (event.persisted) {
+          document.querySelector('.goldfire').style.display = 'none';
+          document.querySelector('.goldfire').style.display = 'block';
+        }
+      };
+    </script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+
+      <header class="header">
+        <div class="container">
+          <div class="left">
+
+            <a href="index.html" class="logo" aria-label="howler.js"></a>
+
+            <div class="title-container">
+              <h1 class="title">
+                모덥 웹 오디오 라이브러리
+              </h1>
+              <p class="subtitle">
+                howler.js 라이브러리는 모든 플랫폼에서 쉽고, 안정적인 JavaScript 오디오 작업을 가능하게 합니다.
+              </p>
+              <a target="_blank" rel="noopener noreferer" href="https://github.com/yamoo9/howler.js" class="button full">다운로드 v2.2.0</a>
+              <a target="_blank" rel="noopener noreferer" href="https://github.com/yamoo9/howler.js#%EB%AC%B8%EC%84%9C" class="button docs">문서</a>
+
+              <div class="social-follow">
+                howler.js 라이브러리 업데이트 및 토론에 참여하려면 <a target="_blank" rel="noopener noreferer" href="https://twitter.com/GoldFireStudios">Twitter</a>를 팔로우 하세요.
+              </div>
+            </div>
+
+            <div class="social-container">
+              <a aria-label="Twitter 공유" target="_blank" rel="noopener noreferer" href="https://twitter.com/intent/tweet?related=GoldFireStudios&amp;text=howler.js%202.0%20-%20Modern%20Web%20Audio%20Javascript%20Library&amp;url=https%3A%2F%2Fhowlerjs.com&amp;via=GoldFireStudios" class="social-icon twitter"></a>
+              <a aria-label="Facebook 공유" target="_blank" rel="noopener noreferer" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//howlerjs.com" class="social-icon facebook"></a>
+              <a aria-label="GitHub 저장소" target="_blank" rel="noopener noreferer" href="https://github.com/goldfire/howler.js" class="github-btn">
+                <div class="social-icon github"></div>
+                <div class="stargazers" aria-label="hawler.js를 좋아하는 사람들"></div>
+              </a>
+            </div>
+          </div>
+
+          <div class="right">
+            <div class="logo-big"></div>
+          </div>
+        </div>
+      </header>
+
+      <div class="features">
+        <div class="container">
+          <h2 class="heading">라이브러리 기능</h2>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div aria-hidden="true" class="feature-icon one"></div>
+              <h3 class="feature-title">사용법이 간단한 API</h3>
+              <p class="feature-descr">모든 오디오 작업에 필요한 API를 일관되게 제공하여, 오디오 작업 경험을 재미 있고 쉽게 구축 할 수 있습니다.</p>
+            </div>
+            <div class="feature-item">
+              <div aria-hidden="true" class="feature-icon two"></div>
+              <h3 class="feature-title">오디오 스프라이트(Sprites)</h3>
+              <p class="feature-descr">보다 정확한 재생과 성능 향상을 위해 오디오 스프라이트로 파일을 구분 단위로 나눠 쉽게 컨트롤 할 수 있습니다.</p>
+            </div>
+            <div class="feature-item">
+              <div aria-hidden="true" class="feature-icon three"></div>
+              <h3 class="feature-title">오디오 스페이셜(Spatial)</h3>
+              <p class="feature-descr">howler.js를 사용하면 간단한 스테레오 팬(stereo pan), 고급 3D 게임 오디오의 모든 것을 손쉽게 제어할 수 있습니다.</p>
+            </div>
+            <div class="feature-item">
+              <div aria-hidden="true" class="feature-icon four"></div>
+              <h3 class="feature-title">모든 오디오 코덱(Codec) 지원</h3>
+              <p class="feature-descr">MP3, MPEG, OPUS, OGG, OGA, WAV, AAC, CAF, M4A, MP4, WEBA, WEBM, DOLBY, FLAC 등 모든 오디오 포멧을 지원합니다.</p>
+            </div>
+            <div class="feature-item">
+              <div aria-hidden="true" class="feature-icon five"></div>
+              <h3 class="feature-title">어디서나 작동 가능</h3>
+              <p class="feature-descr">기본적으로 웹 오디오(Web Audio)로 작동하고, HTML5 오디오로 대체되어 IE 9, Cordova를 포함한 모든 브라우저, 플랫폼에서 작동합니다.</p>
+            </div>
+            <div class="feature-item">
+              <div aria-hidden="true" class="feature-icon six"></div>
+              <h3 class="feature-title">모든 오디오 컨트롤 기능 지원</h3>
+              <p class="feature-descr">재생(play), 일시정지(pause), 탐색(seek), 속도 조절(rate), 페이드(fade), 반복 재생(loop) 등 오디오 컨트롤의 모든 것을 지원합니다.</p>
+            </div>
+            <div class="feature-item">
+              <div aria-hidden="true" class="feature-icon seven"></div>
+              <h3 class="feature-title">자동 캐싱(Caching)</h3>
+              <p class="feature-descr">로드 된 사운드는 보다 나은 성능과 대역폭(bandwidth) 향샹을 위해 자동으로 캐시되어, 다음 호출 과정에서 재사용됩니다.</p>
+            </div>
+            <div class="feature-item">
+              <div aria-hidden="true" class="feature-icon eight"></div>
+              <h3 class="feature-title">모듈러(Modular)</h3>
+              <p class="feature-descr">모듈 설계 방법을 제공해 필요한 것만 조립하여 사용할 수 있습니다. 라이브러리를 쉽게 확장하고 환경에 맞게 기능을 정의, 추가할 수 있습니다.</p>
+            </div>
+            <div class="feature-item">
+              <div aria-hidden="true" class="feature-icon nine"></div>
+              <h3 class="feature-title">의존성 제로(Zero)</h3>
+              <p class="feature-descr">howler.js는 7KB(gzipped 압축 시) 파일 크기로 매우 가볍고, 외부 JavaScript 파일에 의존하지 않는 100% 독립 프로그램입니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="demos">
+        <div class="container">
+          <h2 class="heading">데모(Demos)</h2>
+          <div class="demo-list">
+            <div class="demo-item">
+              <a href="#show-modal__player" class="demo-box player"></a>
+              <div class="demo-title">뮤직 플레이어</div>
+            </div>
+            <div class="demo-item">
+              <a href="#show-modal__radio" class="demo-box radio"></a>
+              <div class="demo-title">라이브 라디오</div>
+            </div>
+            <div class="demo-item">
+              <a href="#show-modal__sprite" class="demo-box sprite"></a>
+              <div class="demo-title">오디오 스프라이트</div>
+            </div>
+            <div class="demo-item">
+              <a href="#show-modal__spatial" class="demo-box spatial"></a>
+              <div class="demo-title">스페이셜 오디오</div>
+            </div>
+            <div class="demo-item">
+              <a href="#show-modal__basic" class="demo-box basic"></a>
+              <div class="demo-title">오디오 컨트롤 테스트</div>
+            </div>
+            <div class="demo-item">
+              <a href="#show-modal__code" class="demo-box code"></a>
+              <div class="demo-title">데모 코드</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal">
+        <div class="modal-frame">
+          <div class="modal-info">
+            <h2 class="modal-title">모달 프레임 타이틀</h2>
+            <button type="button" style="border: 0; padding: 0; line-height: 1; background: transparent;" class="modal-close" aria-label="모달 닫기">×</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="community">
+        <div class="container">
+          <div class="heading">라이브러리 사용자</div>
+          <div class="logo-list">
+            <div aria-label="google" class="user-logo google"></div>
+            <div aria-label="disney" class="user-logo disney"></div>
+            <div aria-label="mozilla" class="user-logo mozilla"></div>
+            <div aria-label="lego" class="user-logo lego"></div>
+            <div aria-label="dolby" class="user-logo dolby"></div>
+            <div aria-label="dylan" class="user-logo dylan"></div>
+            <div aria-label="walmart" class="user-logo walmart"></div>
+            <div aria-label="nasa" class="user-logo nasa"></div>
+            <div aria-label="warner" class="user-logo warner"></div>
+            <div aria-label="paramount" class="user-logo paramount"></div>
+            <div aria-label="universal" class="user-logo universal"></div>
+            <div aria-label="fox" class="user-logo fox"></div>
+            <div aria-label="dc" class="user-logo dc"></div>
+            <div aria-label="ea" class="user-logo ea"></div>
+            <div aria-label="ubisoft" class="user-logo ubisoft"></div>
+            <div aria-label="dominos" class="user-logo dominos"></div>
+          </div>
+          <a href="showcase/index.html" class="button more-users">사용자 더보기</a>
+        </div>
+      </div>
+
+      <div class="waveform"></div>
+
+      <footer class="footer">
+        <div class="container">
+          <a aria-label="goldfire" href="https://goldfirestudios.com" class="goldfire"></a>
+          <p class="contributors"><a href="https://twitter.com/GoldFireStudios">James Simpson</a>과 많은 <a href="https://github.com/goldfire/howler.js/graphs/contributors">기여자</a>에 의해 제작된 라이브러리입니다.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="assets/js/main_v=6.js"></script>
+    <script src="assets/howler.js/dist/howler.min_v=2.1.3.js"></script>
+  </body>
+
+</html>
